@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="shell">
+        <aside class="side">
+            <div class="logo">Sky<span>Logic</span> AI</div>
+            <nav class="nav">
+                <a href="index.html">Dashboard</a>
+                <a href="schedule.html">Flight Scheduler</a>
+                <a href="cargo.html">Cargo Manager</a>
+                <a href="optimizer.html">AI Optimizer</a>
+                <a class="active" href="reports.html">Reports</a>
+            </nav>
+        </aside>
+        <main class="main">
+            <div class="topbar">
+                <h2>Reports & Project Output</h2>
+                <button class="btn primary" onclick="downloadReport()">Download JSON Report</button>
+            </div>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-title">Generated Summary</div>
+                    <p id="reportText"></p>
+                </div>
+                <div class="card">
+                    <div class="card-title">Project Features</div>
+                    <p>Multi-page frontend, localStorage database, flight CRUD, cargo CRUD, AI rules, risk analysis, report export, responsive dashboard, and attractive airline UI.</p>
+                </div>
+            </div>
+            <div class="card mt2">
+                <div class="card-title">Flight Risk Report</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Flight</th>
+                            <th>Route</th>
+                            <th>Risk</th>
+                            <th>Visual Meter</th>
+                        </tr>
+                    </thead>
+                    <tbody id="riskTable"></tbody>
+                </table>
+            </div>
+            <div class="toast"></div>
+        </main>
+    </div>
+
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
